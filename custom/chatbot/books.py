@@ -8,15 +8,15 @@ import time
 
   
 # Инициализация с вашим API ключом  
-taskingai.init(api_key='tkjRj062JOJVJ9b2jg5ihooXyU9LYqak', host='http://localhost:8080')  # или адрес вашего сервера
+taskingai.init(api_key='tkUnNKlBXUJBNBq5A2YkNl0UxlTJ0yPR', host='http://localhost:8080')  # или адрес вашего сервера
   
 #Создание коллекции с моделью для эмбеддингов  
-collection = taskingai.retrieval.create_collection(  
-    name="orthodox-texts",  
-    description="Коллекция творений святых отцов",  
-    embedding_model_id="TpMmJhbV",  # ID модели эмбеддингов  
-    capacity=1000  # Максимальное количество чанков  
-)
+# collection = taskingai.retrieval.create_collection(  
+#     name="orthodox-texts",  
+#     description="Коллекция творений святых отцов",  
+#     embedding_model_id="TpINVr88",  # ID модели эмбеддингов  
+#     capacity=1000  # Максимальное количество чанков  
+# )
 
 
 def filter_metadata(metadata):  
@@ -183,6 +183,6 @@ book_dir = "svyatye-books-cleaned"
 book_files = [f for f in os.listdir(book_dir) if f.endswith(".json")]
 for book_file in book_files:
     file_path = os.path.join(book_dir, book_file)
-    process_book_file(file_path, 'DbgYcaumykebvon2xup4d3fp')
+    process_book_file(file_path, 'DbgYaggvlrj2u1oihonlgvdg')
     print(f"Обработан файл |||||||||||||||||||| {book_file}")
 
