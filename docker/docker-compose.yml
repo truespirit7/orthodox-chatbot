@@ -119,6 +119,8 @@ services:
       timeout: 5s
       retries: 10
     restart: always
+    ports:
+      - "5432:5432"
 
   cache:
     image: redis:7-alpine
@@ -144,3 +146,9 @@ services:
       - frontend
       - backend-web
       - backend-api
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.22.0.0/24
